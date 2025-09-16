@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Citações</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Citações</h1>
+        <blockquote id="citacao-texto">
+        <p>Clique no botão abaixo para gerar uma nova citação!</p>
+        <span></span>
+        </blockquote>
+        <button id="btn">Gerar Citação</button>
+    </div>
+
+    <script>
+        const citacoes = {
+          "A vida é 10% o que acontece comigo e 90% como eu reajo a isso.": "Nilson",
+          "O sucesso é ir de fracasso em fracasso sem perder o entusiasmo.": "Ana",
+          "A única maneira de fazer um excelente trabalho é amar o que você faz.": "Carlos",
+          "Não espere por oportunidades, crie-as." : "Mariana",
+          "A melhor maneira de prever o futuro é criá-lo.": "Lucas",
+        };
+      
+        const citacaoLoopTexto = document.querySelector('#citacao-texto');
+        const novaCitacaoBtn = document.querySelector('#btn');
+      
+        novaCitacaoBtn.addEventListener('click', () => {
+          const pegarObjects = Object.keys(citacoes);
+          const pegarAleatorio = Math.floor(Math.random() * pegarObjects.length);
+          const citacao = pegarObjects[pegarAleatorio];
+          const autor = citacoes[citacao]; 
+      
+         
+          citacaoLoopTexto.innerHTML = `<p>"${citacao}"</p><span>- ${autor}</span>`;
+          console.log("citação gerada:", citacao, "| Autor:", autor);
+        });
+      </script>
+      </body>    
+</html>

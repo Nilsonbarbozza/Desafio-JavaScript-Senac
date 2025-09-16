@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semaforo Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <main>
+        <div style="display: flex; justify-content: center;">
+            <div class="semaforobackground">
+                <h1 id="sinal"> SINAL </h1>
+            </div>
+        </div>
+        <div id="botoes">
+            <button onclick="semaforo('red', 'Pare!')" id="vermelho" class="botao">Vermelho</button>
+            <button onclick="semaforo('yellow', 'Atencao')" id="amarelo" class="botao">Amarelo</button>
+            <button onclick="semaforo('green', 'Siga!')" id="verde" class="botao">Verde</button>
+        </div>
+    </main>
+
+    <script>        
+
+        function semaforo(cor, text) {
+            const sinal = document.querySelector('#sinal');
+            const background = document.querySelector('.semaforobackground');
+            background.style.backgroundColor = cor;
+            sinal.innerHTML = text;
+        }
+        
+    </script>   
+</body>
+</html>

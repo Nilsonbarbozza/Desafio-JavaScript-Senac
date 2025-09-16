@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada Inteligente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lâmpada Mágica</h1>
+    </header>
+    <main>
+        <div>
+            <img id="lampada" src="./img/desligada.webp" alt="Lâmpada desligada">
+        </div>
+        <div>
+            <button id="toggle-btn">Ligar/Desligar</button>
+        </div>
+    </main>
+
+    <script>
+        const lampada = document.querySelector('#lampada');
+        const toggleBtn = document.querySelector('#toggle-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            if (lampada.src.includes('desligada.webp')) {
+                lampada.src = './img/ligada.png';
+                lampada.alt = 'Lâmpada ligada';
+            } else {
+                lampada.src = './img/desligada.webp';
+                lampada.alt = 'Lâmpada desligada';
+            }
+        });
+    </script>
+
+</body>
+</html>

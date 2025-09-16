@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link href="styles.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="calculator">
+        <h1>Calculadora de Gorjeta</h1>
+            <label for="bill">Valor da Conta:</label>
+                <input type="number" id="bill" placeholder="Ex: 50.00">
+            <label for="tip">Porcentagem da Gorjeta (%):</label>
+                <input type="number" id="tip" placeholder="Ex: 15">
+            <button onclick="calcular()" id="calculate-btn">Calcular</button>
+        <div id="result">
+            <p>Valor da Gorjeta: R$ <span id="tip-amount">0.00</span></p>
+            <p>Valor Total: R$ <span id="total-amount">0.00</span></p>
+        </div>
+    </div>
+    <script>
+
+    const conta = document.querySelector('#bill');
+    const tip = document.querySelector('#tip');
+
+    function calcular() {
+      const valorConta = parseFloat(conta.value);
+      const porcentagem = parseFloat(tip.value);
+
+      const valorGorjeta = (valorConta * porcentagem) / 100;
+      const totalComGorjeta = valorConta + valorGorjeta;
+
+      document.querySelector('#tip-amount').innerText = valorGorjeta.toFixed(2);
+      document.querySelector('#total-amount').innerText = totalComGorjeta.toFixed(2);
+
+      console.log("Minha Conta:", valorConta, " | Gorjeta:", valorGorjeta, " | Total:", totalComGorjeta);
+    }
+  </script>
+    </script>
+</body>
+</html>s
