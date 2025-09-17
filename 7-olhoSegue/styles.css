@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #79d2ff;
+    }
+.eyes {
+    display: flex;
+    }
+.eye {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    }
+.pupil {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 29.5%;
+    left: 29.5%;
+    transform: translate(-50%, -50%);
+    }
+    

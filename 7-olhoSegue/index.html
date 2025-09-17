@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 09 - O Olho que Segue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="eyes">
+        <div class="eye">
+            <div class="pupil"></div>
+    </div>
+        <div class="eye">
+            <div class="pupil"></div>
+        </div>
+    </div>
+<script>
+    const olhos = document.querySelectorAll('.eye');
+
+    document.addEventListener('mousemove', (event) => {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        olhos.forEach(eye => {
+            const rect = eye.getBoundingClientRect();
+            const eyeCenterX = rect.left + rect.width / 3;
+            const eyeCenterY = rect.top + rect.height / 3;
+
+            const angle = Math.atan2(mouseY - eyeCenterY, mouseX - eyeCenterX);
+            const pupil = eye.querySelector('.pupil');
+            const radius = (rect.width / 2) - (pupil.offsetWidth / 2);
+
+            const pupilX = radius * Math.cos(angle);
+            const pupilY = radius * Math.sin(angle);
+
+            pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+        });
+    });
+
+
+</script>
+</body>
+</html>

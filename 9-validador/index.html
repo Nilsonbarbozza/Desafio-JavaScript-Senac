@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 10 - Validador de Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Crie sua Conta</h2>
+        <form id="signup-form">
+        <div class="form-group">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" id="username" name="username">
+        <small>O nome de usuário deve ter pelo menos 3 caracteres.</small>
+    </div>
+        <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <small>A senha deve ter pelo menos 8 caracteres.</small>
+        </div>
+        <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+<script>
+    function validateForm() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        let valid = true;
+
+        if (username.length < 3) {
+            console.log('O nome de usuário deve ter pelo menos 3 caracteres.');
+            alert('O nome de usuário deve ter pelo menos 3 caracteres.');
+            valid = false;
+        }
+
+        if (password.length < 8) {
+            alert('A senha deve ter pelo menos 8 caracteres.');
+            valid = false;
+        }
+
+        return valid;
+    }
+</script>
+
+</body>
+</html>

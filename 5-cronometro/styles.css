@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #34495e;
+    }
+.stopwatch {
+    background-color: #ecf0f1;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    }
+.timer-display {
+    font-size: 5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    }
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    }
+    

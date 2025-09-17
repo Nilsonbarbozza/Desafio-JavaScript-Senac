@@ -1,0 +1,33 @@
+body { font-family: 'Segoe UI', sans-serif; 
+    background-color: #eef; }
+.form-container { 
+    max-width: 400px; 
+    margin: 50px auto; 
+    padding: 20px; 
+    background:white; 
+    border-radius: 5px; }
+
+.form-group { 
+    margin-bottom: 15px; }
+label { 
+    display: block; 
+    margin-bottom: 5px; }
+input { 
+    width: 100%;
+    padding: 8px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    transition: border-color 0.3s; }
+small { 
+    color: #666; }
+.form-group.success input { 
+    border-color: #2ecc71; }
+.form-group.error input { 
+    border-color: #e74c3c; }
+button { 
+    width: 100%; 
+    padding: 10px; 
+    background: #3498db; 
+    color: white; 
+    border: none;
+    cursor: pointer; }
